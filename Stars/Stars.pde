@@ -1,5 +1,3 @@
-//via /* OpenProcessing Tweak of *@*http://www.openprocessing.org/sketch/9299*@* */
-// declaration of variables
 Drop myDrop;
 ArrayList drops = new ArrayList();
 float current;
@@ -8,9 +6,8 @@ int dropNum = 100;
 
 // set up function
 void setup() {
-  //size(600, 600);
-  fullScreen();
-  background(0);
+  size(600, 600);
+  background(0,0,30);
   /*
   xPos = 300;
   yPos = 0;
@@ -29,7 +26,7 @@ void setup() {
 // draw function
 void draw() {
   blur(30); //cahnge value for amount of dots left on screen
-  if((millis()-current)/1000>reseed&& drops.size()<200){
+  if((millis()-current)/1000>reseed&& drops.size()<dropNum){
     drops.add(new Drop());
     float reseed = random(0, .2);
     current = millis();
@@ -42,7 +39,7 @@ void draw() {
       
       drops.remove(i);
       float rand = random(0,100);
-      if (rand>10 && drops.size()<200){
+      if (rand>5 && drops.size()<dropNum){
           drops.add(new Drop());
       }
     }
@@ -77,6 +74,6 @@ void draw() {
 
 void blur(float trans){
   noStroke();
-  fill(0, trans);
+  fill(0,0,30, trans);
   rect(0,0, width,height);
 }

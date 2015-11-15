@@ -21,17 +21,19 @@ public class Drop{
   */
   
   PVector position, pposition, speed;
-  float col;
+  float col, xposition;
   
   public Drop(){
-    position = new PVector(random(-100,width+100), 0);
+    xposition = random(-width - 300,width);
+   // position = new PVector(random(-400,width), 0);
+    position = new PVector(xposition, 0);
     pposition = position;
     speed = new PVector(0,0);
     col = random(100, 255); //random alpha (opacity)
   }
   
   void draw(){
-    stroke(255, col);
+    stroke(255,255,150, col);
     strokeWeight(2);
     line(position.x, position.y, pposition.x, pposition.y);
     //ellipse(position.x, position.y, 3, 3);
@@ -44,8 +46,31 @@ public class Drop{
   }
   
   void gravity(){
-    speed.y += .2; //speed increases as falls
-    speed.x += .02; //positive makes rain go to right, neg to left. can be changed for degree of angle
+    speed.y += .1; //speed increases as falls
+    //bends
+    if(position.y <200){
+     speed.x += .07; //positive makes rain go to right, neg to left. can be changed for degree of angle
+    } else {
+     speed.x += -.07;
+    }
+    
+    //changes direction everytime crosses middle
+    //if(position.x <300){
+    // speed.x += position.y/600;
+    //} else {
+    // speed.x += -position.y/600;
+    //}
+   
+    //crosses once in middle
+    //if(xposition <300){
+    // speed.x += position.y/600;
+    //} else {
+    // speed.x += -position.y/600;
+    //}
+   
+    //increases x velocity as y velocity increases
+    speed.x += position.y/900;
+    
     position.add(speed);
   }
 }
