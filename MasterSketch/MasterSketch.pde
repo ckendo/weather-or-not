@@ -38,7 +38,7 @@ void setup()
   Sketch dr2 = new Stars(100, .1, 900, color(255, 255, 150)); //drops, speed, direction/curve
   dr2.SetDuration(2);
   sketches.add(dr2);
-  /*
+  
   Sketch dr3 = new Lightning();
   dr3.SetDuration(2);
   sketches.add(dr3);  
@@ -61,7 +61,7 @@ void setup()
   
   Sketch dr8 = new Stars(200, 5, 100, color(5, 123, 181)); //drops, speed, direction/curve
   dr8.SetDuration(5);
-  sketches.add(dr8);*/
+  sketches.add(dr8);
 }
 
 void draw()
