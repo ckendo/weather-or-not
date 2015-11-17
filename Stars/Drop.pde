@@ -48,24 +48,24 @@ public class Drop{
   void gravity(){
     speed.y += .1; //speed increases as falls
     //bends
-    if(position.y <200){
-     speed.x += .07; //positive makes rain go to right, neg to left. can be changed for degree of angle
-    } else {
-     speed.x += -.07;
-    }
+    //if(position.y <200){
+    // speed.x += .07; //positive makes rain go to right, neg to left. can be changed for degree of angle
+    //} else {
+    // speed.x += -.07;
+    //}
     
     //changes direction everytime crosses middle
     //if(position.x <300){
-    // speed.x += position.y/600;
+    //speed.x += position.y/600;
     //} else {
-    // speed.x += -position.y/600;
+    //speed.x += -position.y/600;
     //}
    
     //crosses once in middle
     //if(xposition <300){
-    // speed.x += position.y/600;
+    //speed.x += position.y/600;
     //} else {
-    // speed.x += -position.y/600;
+    //speed.x += -position.y/600;
     //}
    
     //increases x velocity as y velocity increases

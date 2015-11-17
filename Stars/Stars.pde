@@ -6,7 +6,8 @@ int dropNum = 100;
 
 // set up function
 void setup() {
-  size(600, 600);
+  //size(600, 600);
+  fullScreen();
   background(0,0,30);
   /*
   xPos = 300;
