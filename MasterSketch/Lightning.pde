@@ -51,6 +51,8 @@ class Lightning extends DefaultSketch
     bolt = new lightningBolt(random(0,width),0,random(minBoltWidth,maxBoltWidth),0,minJumpLength,maxJumpLength,boltColor);
   }
   
+  void Setup(){}
+  
   void Draw(){
     //check if any of the stored times need to make a 'ding'
     if(playThunder && thunderTimes.size() > 0)

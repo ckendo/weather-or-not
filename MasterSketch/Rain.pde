@@ -20,6 +20,8 @@ class Rain extends DefaultSketch
     drops.add(new Drop());
     current = millis();
   }
+  
+  void Setup(){}
 
   //@Override
   void Draw()

@@ -3,17 +3,23 @@ Sketch currentSketch;
 int currentSketchIdx;
 int currentDuration;
 
+Minim minim;
+AudioPlayer song;
+
 interface Sketch
 {
   public void Draw();
   public int GetDuration();
   public void SetDuration(int d);
+  public void Setup();//TODO:REMOVE
 }
 
 abstract class DefaultSketch implements Sketch
 {
   protected int m_duration = 10;
 
+  public abstract void Setup();
+  
   public abstract void Draw();
   //@Override
   public int GetDuration()
@@ -29,7 +35,8 @@ abstract class DefaultSketch implements Sketch
 
 void setup()
 {
-  fullScreen();
+  //fullScreen();
+  size(600, 600);
   
   Sketch dr1 = new Rain(100, .2, .02); //takes in number of drops
   dr1.SetDuration(2);
@@ -78,5 +85,7 @@ void draw()
       //noLoop();
       currentSketchIdx = 0; //start from the beginning
     }
+    currentSketch = (Sketch) sketches.get(currentSketchIdx);
+    currentSketch.Setup();
   }
 }

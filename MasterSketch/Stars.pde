@@ -9,16 +9,26 @@ class Stars extends DefaultSketch
   float yOffset;
   int xDivisor;
   color starColor;
+  AudioPlayer song;
   
   Stars(int numOfDrops, float yOff, int xDiv, color dropColor) //could have dropNum as input
   {
-    background(0, 0, 30);
+    //background(0, 0, 30);
     dropNum = numOfDrops;
     yOffset= yOff;
     xDivisor = xDiv;
     starColor = dropColor;
+    
+    /*song = minim.loadFile("starsblurpad.wav");
+    song.play();*/
 
     //setting size in main
+    /*drops.add(new Drop());
+    current = millis();*/
+  }
+  
+  void Setup(){
+    background(0, 0, 30);
     drops.add(new Drop());
     current = millis();
   }
