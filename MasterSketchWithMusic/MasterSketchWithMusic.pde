@@ -43,43 +43,43 @@ abstract class DefaultSketch implements Sketch
 
 void setup()
 {
-  //fullScreen();
-  size(600, 600);
+  fullScreen();
+  //size(600, 600);
   
   minim = new Minim(this);
   
   newStart = true;
   
   Sketch dr1 = new Rain(100, .2, .02); //takes in number of drops
-  dr1.SetDuration(5);
+  dr1.SetDuration(30);
   sketches.add(dr1);
   
   Sketch dr2 = new Stars(100, .1, 900, color(255, 255, 150)); //drops, speed, direction/curve
-  dr2.SetDuration(5);
+  dr2.SetDuration(30);
   sketches.add(dr2);
   
   Sketch dr3 = new Lightning();
-  dr3.SetDuration(5);
+  dr3.SetDuration(30);
   sketches.add(dr3);  
   
   Sketch dr5 = new Rain(300, .2, -.04); //takes in number of drops
-  dr5.SetDuration(5);
+  dr5.SetDuration(30);
   sketches.add(dr5);
   
   Sketch dr4 = new Stars(200, .8, -400, color(255, 219, 226)); //drops, speed, direction/curve
-  dr4.SetDuration(5);
+  dr4.SetDuration(30);
   sketches.add(dr4);
   
   Sketch dr6 = new Lightning();
-  dr6.SetDuration(5);
+  dr6.SetDuration(30);
   sketches.add(dr6);  
   
   Sketch dr7 = new Rain(100, .7, .08); //takes in number of drops
-  dr7.SetDuration(5);
+  dr7.SetDuration(30);
   sketches.add(dr7);
   
   Sketch dr8 = new Stars(200, 5, 100, color(5, 123, 181)); //drops, speed, direction/curve
-  dr8.SetDuration(5);
+  dr8.SetDuration(30);
   sketches.add(dr8);
 }
 

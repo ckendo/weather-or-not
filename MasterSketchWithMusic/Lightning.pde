@@ -2,8 +2,8 @@ import java.awt.Color;
 
 class Lightning extends DefaultSketch
 {
-  int width = 900;
-  int height = 500;
+  //int width = 900;
+  //int height = 500;
    
   float maxDTheta = PI/10;
   float minDTheta = PI/20;
