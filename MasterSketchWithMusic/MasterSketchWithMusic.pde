@@ -51,8 +51,12 @@ void setup()
   newStart = true;
   
   Sketch dr1 = new Rain(100, .2, .02); //takes in number of drops
-  dr1.SetDuration(30);
+  dr1.SetDuration(10);
   sketches.add(dr1);
+  
+  Sketch dr10 = new Sky(color(110, 219, 255), color(7, 0, 138), 200);
+  dr10.SetDuration(10);
+  sketches.add(dr10);
   
   Sketch dr2 = new Stars(100, .1, 900, color(255, 255, 150)); //drops, speed, direction/curve
   dr2.SetDuration(30);
@@ -97,6 +101,7 @@ void draw()
   int time = millis() / 1000;
   if (time - currentDuration > currentSketch.GetDuration())
   {
+    background(0);
     currentSketch.StopAudio();  
     
     currentSketchIdx++;
