@@ -7,7 +7,7 @@ SimpleTwitterStreaming
 
 ///////////////////////////// Config your setup here! ////////////////////////////
 
-class dataStorm extends DefaultSketch{
+class DataStorm extends DefaultSketch{
   // This is where you enter your Oauth info
   String OAuthConsumerKey = "u4nVQf1SUWU9KFT8qoqAHalrJ";
   String OAuthConsumerSecret = "OFXgh9fRQPkdsM3ImiMbn0zQQX4qWlh6eG4kgEEtt8pwI4XNYI";
@@ -36,7 +36,7 @@ class dataStorm extends DefaultSketch{
   PImage[] buffer = new PImage[5];
   int currentIndex = 1;
   
-  dataStorm(){
+  DataStorm(){
   }
   
   //@Override

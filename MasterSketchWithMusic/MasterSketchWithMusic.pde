@@ -50,12 +50,16 @@ void setup()
   
   newStart = true;
   
+  Sketch dr11 = new Northern();
+  dr11.SetDuration(30);
+  sketches.add(dr11);
+  
   Sketch dr1 = new Rain(100, .2, .02); //takes in number of drops
-  dr1.SetDuration(10);
+  dr1.SetDuration(30);
   sketches.add(dr1);
   
   Sketch dr10 = new Sky(color(110, 219, 255), color(7, 0, 138), 200);
-  dr10.SetDuration(10);
+  dr10.SetDuration(30);
   sketches.add(dr10);
   
   Sketch dr2 = new Stars(100, .1, 900, color(255, 255, 150)); //drops, speed, direction/curve
@@ -77,6 +81,10 @@ void setup()
   Sketch dr6 = new Lightning();
   dr6.SetDuration(30);
   sketches.add(dr6);  
+  
+  Sketch dr12 = new Northern();
+  dr12.SetDuration(30);
+  sketches.add(dr12);
   
   Sketch dr7 = new Rain(100, .7, .08); //takes in number of drops
   dr7.SetDuration(30);
